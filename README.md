@@ -25,8 +25,8 @@ System.out.println("Beginning");
 			
 			// Either the 2 following inserts are executed, or none of them are. This is
 			// atomicity
-			stmt1.executeUpdate("INSERT INTO Product (prodid, pname, price) VALUES ('p4', 'Printer', 100.00)");
-			stmt1.executeUpdate("INSERT INTO Stock (prodid, depid, quantity) VALUES ('p4', 'd1', 15)");
+			stmt1.executeUpdate("INSERT INTO Product VALUES ('p4', 'Printer', 100.00)");
+			stmt1.executeUpdate("INSERT INTO Stock VALUES ('p4', 'd1', 15)");
 		} catch (SQLException e) {
 			System.out.println("An exception was thrown");
 			e.printStackTrace();
